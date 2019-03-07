@@ -7,6 +7,7 @@ var wss = new WebSocketServer({
 var connects = [];
 
 wss.on('connection', function(ws) {
+	connects.push(ws);
 	ws.on('close', function () {
 		console.log('stopping client send "close"');
 		connects = connects.filter(function (conn, i) {
