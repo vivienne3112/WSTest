@@ -1,0 +1,31 @@
+input[type='text'] {
+	width: 200px;
+	letter-spacing: 1px;
+	border: none;
+	border-bottom: 2px solid #1b2538;
+	background: transparent;
+	margin-right: 2em;
+}
+input[type='text']:focus {
+	border-bottom: 2px solid #da3c41;
+	outline: none;
+}
+button {
+	width: 100px;
+	border: 2px solid #5ab4bd;
+	background-color: white;
+	color: #5ab4bd;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 4px;
+	transition: .4s;
+}
+button:hover {
+	border: 2px solid #5ab4bd;
+	background-color: #5ab4bd;
+	color: white;
+	transition: .0s;
+}
+#status {
+	color:#da3c41;
+}
