@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
 
 	var hostname = (window.location.hostname == "") ? "localhost" : window.location.hostname;
-	var urlattr = (window.location.protocol == "file:") ? ":8000" : window.location.protocol;
+	var urlattr = (window.location.protocol == "file:") ? ":8000" : "/chat";
 
 	document.querySelector("#connectURL").textContent = "ws://" + hostname + urlattr;
 	SetWS(new poorws(document.querySelector("#connectURL").textContent));
