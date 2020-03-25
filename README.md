@@ -43,8 +43,8 @@ WSテスト用プロジェクト
 	WebSocketを行うライブラリ
 * js/uuid-v4.js  
 	UUIDを作成するライブラリ
-* js/jquery-2.1.4.min.js  
-	JQuery
+* js/index.js
+	画面、event_poorws.jsをつなぐJavaScript
 * js/event_poorws.js  
 	WebSockeライブラリを扱うJavaScript
 
