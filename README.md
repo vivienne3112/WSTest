@@ -12,8 +12,8 @@ WSテスト用プロジェクト
 	1. 利用PCにNodeJSのインストール
 	1. 本フォルダで「npm install」実行
 		1. 本フォルダ直下に「node_modules」のフォルダができていればOKです。
-	1. 「event_poorws.js」更新
-		1. 接続先はlocalhost:8000になっているので、利用するPCに合わせ変更してください。
+	1. 「index.js」更新
+		1. 接続先を変更する場合、「index.js」のL.3、L.4を更新してください。
 	1. コンソールで「node WSTestServer.js」と実行
 	1. index.htmlをchromeで実行
 		1. WebSocketの動きがわかるようになるために、以下のセットでやるのがおすすめです。
@@ -40,8 +40,8 @@ WSテスト用プロジェクト
 * js/uuid-v4.js  
 	UUIDを作成するライブラリ
 * js/index.js  
-	画面、event_poorws.jsをつなぐJavaScript
-* js/event_poorws.js  
+	画面、epoorws.jsをつなぐJavaScript
+* js/epoorws.js  
 	WebSockeライブラリを扱うJavaScript
 
 ファイルを見てさっぱりわからなかったら連絡をください。
