@@ -6,11 +6,10 @@ on:
       keyword:
         required: true
         description: キーワード
-      env:
-        type: choice
-          - dev
-          - prod
-        
+      branchCheck:
+        description: 選択しているブランチは正しいですか？
+        required: true
+        type: boolean
 
 jobs:
   testJob1:
@@ -19,8 +18,8 @@ jobs:
     steps:
       - name: check
         id: check
-        if: github.event.inputs.keyword == 'test'
-        run: echo key ok!
+        if: github.event.inputs.keyword == 'test' && github.event.inputs.branchCheck
+        run: echo key and check ok!
       - name: if bunki
         if: steps.check.conclusion == 'success' 
         run: echo Hello, world!
