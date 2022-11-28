@@ -1,11 +1,20 @@
-name: workflow release prod
+name: actions test
 
 on:
   workflow_dispatch:
+    inputs:
+      keyword:
+        required: true
+        description: キーワード
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo Hello, world!
+      - name: if bunki
+        if: github.event.inputs.keyword == 'test' 
+        run: echo Hello, world!
+      - name: if bunki2
+        if: github.event.inputs.keyword != 'test' 
+        run: echo Hello, world!!!
