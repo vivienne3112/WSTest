@@ -1,8 +1,8 @@
-name: workflow release prod
+name: actions test
 
 on:
   push:
-    workflow_dispatch: [main]
+    workflow_dispatch:
 
 jobs:
   build:
