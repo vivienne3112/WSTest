@@ -28,9 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: relase1
-        if: steps.check.conclusion == 'success' 
+        if: testJob1.steps.check.conclusion == 'success' 
         run: echo check success
       - name: relase2
-        if: steps.check.conclusion == 'skipped' 
+        if: testJob1.steps.check.conclusion == 'skipped' 
         run: echo check skip
-        
