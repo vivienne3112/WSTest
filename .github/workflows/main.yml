@@ -12,9 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: check
+        id: check
+        if: github.event.inputs.keyword == 'test'
+        run: echo key ok!
       - name: if bunki
-        if: github.event.inputs.keyword == 'test' 
+        if: steps.check.conclusion == 'success' 
         run: echo Hello, world!
       - name: if bunki2
-        if: github.event.inputs.keyword != 'test' 
+        if: steps.check.conclusion == 'skipped' 
         run: echo Hello, world!!!
