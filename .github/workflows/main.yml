@@ -24,6 +24,7 @@ jobs:
         run: echo Hello, world!!!
 
   testJob2:
+    needs: testJob1
     runs-on: ubuntu-latest
     steps:
       - name: relase1
