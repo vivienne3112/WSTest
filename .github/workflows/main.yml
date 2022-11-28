@@ -33,8 +33,11 @@ jobs:
     steps:
       - name: check
         id: check
-        if: github.event.inputs.keyword == 'test'
-        run: echo key ok!
+        if: github.event.inputs.keyword == 'test' && github.event.inputs.branchCheck
+        run: |
+          echo key and check ok!
+          echo key and check ok!
+          echo key and check ok!
 
       - name: relase1
         if: steps.check.conclusion == 'success' 
