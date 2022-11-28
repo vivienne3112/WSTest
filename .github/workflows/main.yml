@@ -6,6 +6,11 @@ on:
       keyword:
         required: true
         description: キーワード
+      env:
+        type: choice
+          - dev
+          - prod
+        
 
 jobs:
   testJob1:
