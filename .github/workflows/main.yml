@@ -27,9 +27,15 @@ jobs:
     needs: testJob1
     runs-on: ubuntu-latest
     steps:
+      - name: check
+        id: check
+        if: github.event.inputs.keyword == 'test'
+        run: echo key ok!
+
       - name: relase1
-        if: testJob1.steps.check.conclusion == 'success' 
+        if: steps.check.conclusion == 'success' 
         run: echo check success
+
       - name: relase2
-        if: testJob1.steps.check.conclusion == 'skipped' 
+        if: steps.check.conclusion == 'skipped' 
         run: echo check skip
