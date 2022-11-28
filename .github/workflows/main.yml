@@ -1,8 +1,7 @@
 name: actions test
 
 on:
-  push:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
