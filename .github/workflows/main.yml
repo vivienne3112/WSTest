@@ -8,7 +8,7 @@ on:
         description: キーワード
 
 jobs:
-  build:
+  testJob1:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,3 +22,10 @@ jobs:
       - name: if bunki2
         if: steps.check.conclusion == 'skipped' 
         run: echo Hello, world!!!
+
+  testJob2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: relase1
+        if: steps.check.conclusion == 'success' 
+        run: echo check success
