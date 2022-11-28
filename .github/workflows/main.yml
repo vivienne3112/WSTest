@@ -25,6 +25,7 @@ jobs:
 
   testJob2:
     runs-on: ubuntu-latest
+    needs: testJob1
     steps:
       - name: relase1
         if: steps.check.conclusion == 'success' 
