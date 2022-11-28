@@ -1,8 +1,7 @@
 name: workflow release prod
 
 on:
-  push:
-    workflow_dispatch: [main]
+  workflow_dispatch:
 
 jobs:
   build:
