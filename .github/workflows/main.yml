@@ -30,6 +30,7 @@ jobs:
         run: |
           echo "${{ github.ref }}"
           echo "${branch_name}"
+          echo "${{github.head_ref}}"
   
   testJob2:
     needs: testJob1
