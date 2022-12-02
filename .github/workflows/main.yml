@@ -31,6 +31,16 @@ jobs:
           echo "${{ github.ref }}"
           echo "${branch_name}"
           echo "${{github.head_ref}}"
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+        id: extract_branch
+
+      - name: Print branch name
+        env:
+          BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
+        run: echo $BRANCH_NAME
   
   testJob2:
     needs: testJob1
