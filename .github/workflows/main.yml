@@ -26,6 +26,8 @@ jobs:
       - name: if bunki2
         if: steps.check.conclusion == 'skipped' 
         run: echo Hello, world!!!
+      - name: branch name
+        run: echo "${{ github.ref }}"
 
   testJob2:
     needs: testJob1
