@@ -27,8 +27,10 @@ jobs:
         if: steps.check.conclusion == 'skipped' 
         run: echo Hello, world!!!
       - name: branch name
-        run: echo "${{ github.ref }}"
-
+        run: |
+          echo "${{ github.ref }}"
+          echo "${branch_name}"
+  
   testJob2:
     needs: testJob1
     runs-on: ubuntu-latest
